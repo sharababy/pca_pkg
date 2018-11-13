@@ -56,9 +56,13 @@ def PCA(filename = "",topk = 0, graph=True):
 	projected_mat = max_variance_vectors.dot(centered_mat.T)
 
 	if graph:
-		plt.xlabel = "PC1"
-		plt.ylabel = "PC2"
-		plt.scatter(projected_mat[0],projected_mat[1])
+		fig = plt.figure()
+		fig.suptitle('PCA on '+filename, fontsize=14, fontweight='bold')
+		ax = fig.add_subplot(111)
+		ax.set_xlabel("PC1")
+		ax.set_ylabel("PC2")
+		ax.scatter(projected_mat[0],projected_mat[1])
+		
 		plt.show()
 
 	return projected_mat.T
