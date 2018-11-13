@@ -21,7 +21,17 @@ def PCA(filename = "",topk = 0, graph=True):
 		reader = csv.reader(datafile,delimiter=",")
 		next(reader)
 		for row in reader:
-			data.append(list(map(float,row[2:])))
+			
+			# data.append(list(map(float,row[2:])))
+			float_row = []
+			for value in row[2:]:
+				try:
+					value = float(value)
+					float_row.append(value)
+
+				except ValueError:
+					float_row.append(0.0)					
+			data.append(float_row)
 			label.append(row[1])
 
 	data_mat = np.asarray(data)
@@ -43,12 +53,11 @@ def PCA(filename = "",topk = 0, graph=True):
 		max_variance_vectors.append(vectors[index])
 
 	max_variance_vectors = np.asarray(max_variance_vectors)
-	print(values)
-	print(max_variance_vectors)
-
 	projected_mat = max_variance_vectors.dot(centered_mat.T)
 
 	if graph:
+		plt.xlabel = "PC1"
+		plt.ylabel = "PC2"
 		plt.scatter(projected_mat[0],projected_mat[1])
 		plt.show()
 
