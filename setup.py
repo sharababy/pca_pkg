@@ -15,7 +15,7 @@ setup(
     maintainer='Vedant Bassi',
     maintainer_email='ced15i013@iiitdm.ac.in',
     description='Computations of PCA for a given csv file.',
-    py_modules=['pca_module'],
+    py_modules=['pcapkg'],
     license='BSD License',
     platforms='Any',
     classifiers=[
