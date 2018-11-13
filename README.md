@@ -1,4 +1,4 @@
-# `pca_pkg` - Python Package for calculating PCA given datafile (csv) 
+# `pcapkg` - Python Package for calculating PCA given datafile (csv) 
 
 ## Requirements
 * matplotlib>=2.2.3 

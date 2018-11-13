@@ -8,7 +8,7 @@ LICENSE file in the root directory of this source tree.
 from setuptools import setup
 
 setup(
-    name='pca_pkg',
+    name='pcapkg',
     version='1.0',
     author='Vedant Bassi',
     author_email='ced15i013@iiitdm.ac.in',

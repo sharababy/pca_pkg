@@ -1,1 +1,1 @@
-from pca_pkg.pca_module import PCA
+from pcapkg.pca_module import PCA
